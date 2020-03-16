@@ -2,9 +2,12 @@ ROOT_DIR=`pwd`
 
 sudo apt-get install git
 
-sudo apt-get install autoconf automake libtool curl make g++ unzip clang llvm libpcap-dev libelf-dev iproute2 net-tools
-sudo apt-get install cmake libgc-dev bison flex libfl-dev libgmp-dev libboost-dev libboost-iostreams-dev libboost-graph-dev llvm pkg-config python python3 python3-scapy python-ipaddr python3-ply python3-pip tcpdump
-sudo pip3 install pyroute2 ply scapy
+
+sudo apt-get install cmake g++ git automake libtool libgc-dev bison flex libfl-dev libgmp-dev libboost-dev libboost-iostreams-dev libboost-graph-dev llvm pkg-config python python-scapy python-ipaddr python-ply python3-pip tcpdump 
+sudo apt-get install clang llvm libpcap-dev libelf-dev iproute2 net-tools
+sudo pip3 install --upgrade pip
+sudo pip3 install pyroute2 ply==3.8 scapy==2.4.0 ipaddr
+sudo pip3 install --upgrade scapy
 
 # INSTALLING PROTOBUF
 echo "INSTALLING PROTOBUF"
@@ -35,4 +38,4 @@ mkdir -p build
 cd build
 sudo cmake .. -DCMAKE_BUILD_TYPE=DEBUG
 sudo make -j8 && sudo make -j8 install
-sudo make -j8 check 
+#sudo make -j8 check 
