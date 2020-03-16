@@ -1,7 +1,7 @@
 # Installing P4 Enviroment
 
 ## Installing 
-`sudo ./p4install.sh'
+`sudo ./p4install.sh`
 
 This will download folowing repos and build them.
 1. [Protobuf](https://github.com/protocolbuffers/protobuf)
